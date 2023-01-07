@@ -5,16 +5,17 @@ const questions: string[] = [
   "Je peux donner l'impression d'être plus compétent que je ne le suis réellement.",
   "J'évite d'être évalué si je le peux",
   "Je déteste que les autres m'évaluent",
-  "Je réussi souvent une tâche même si j'avais peur de ne pas bien la réaliser avant de commencer",
+  "Je réussis souvent une tâche même si j'avais peur de ne pas bien la réaliser avant de commencer",
   "Je pense parfois que j'ai obtenu ma position actuelle car je me trouvais au bon endroit au bon moment ou que je connaissais les bonnes personnes",
   "Je réalise rarement un projet ou une tâche aussi bien que je le voudrais",
   "J'ai du mal à accepter des compliments sur mes réalisations",
-  "Lorsque j'ai réussi quelque chose et été reconnu pour mes réalisations, je doute que je puisse continuer à répéter ce succès",
+  "Lorsque j'ai réussi quelque chose et que j'ai été reconnu pour mes réalisations, je doute que je puisse continuer à répéter ce succès",
   "J'ai peur de l'échec",
   "Je crains que les autres puissent un jour découvrir mon manque de connaissances ou de compétences",
   "J'ai tendance à attribuer mon succès à des causes externes",
   "Je pense que le succès amène jalousie et rejet des autres",
-  "Je ressasse en permanence la liste des choses que j'aurai du faire"
+  "Je ressasse en permanence la liste des choses que j'aurai du faire",
+  "Je ne me sens pas à ma place dans mon travail",
 ];
 
 @Component({
