@@ -17,10 +17,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30vh auto 0;
+    margin: 20vh auto 0;
     padding: 0 8%;
     text-align: center;
     row-gap: 42px;
+
+    @media (min-width: 768px) {
+        margin: 30vh auto 0;
+    }
 }
 
 // top animation
