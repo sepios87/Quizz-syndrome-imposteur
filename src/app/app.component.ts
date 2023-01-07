@@ -37,7 +37,7 @@ const questions: string[] = [
   ]
 })
 export class AppComponent {
-  step: number = 14;
+  step: number = 0;
   points: number[] = [];
   questions = questions;
 
