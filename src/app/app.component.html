@@ -1,0 +1,62 @@
+<button *ngIf="step > 0" class="button button--back" (click)="previousStep()">Précédent</button>
+
+<img class="logo" src="assets/logo.png"/>
+
+<div *ngIf="step === 0" class="step-start">
+  <h1>Es-tu victime du syndrome de l'imposteur ?</h1>
+  <div class="step-start__text">
+    <p>A travers {{questions.length}} questions, tu vas pouvoir savoir à quel point tu peux être touché par le syndrome
+      de l'imposteur</p>
+    <p>Tes réponses ne seront disponibles que pour toi et ne seront pas sauvegardées ou exploitées</p>
+  </div>
+  <button class="button" (click)="nextStep()">Commencer</button>
+</div>
+
+<ng-container *ngFor="let question of questions; index as i">
+  <app-question [@inOutAnimation] *ngIf="step - 1 === i" [question]="question" [value]="points[step - 1]"
+    (onResponse)="onClick($event)"></app-question>
+</ng-container>
+
+<div *ngIf="step === questions.length + 1" class="step-end">
+  <h1>Félicitation, tu viens de finir le questionnaire</h1>
+  <p class="step-end__result">Voici tes résultats : {{results}}</p>
+  <div class="step-end__explain">
+    <p>
+      Voici un peu de lecture sur une expliaction avec les solutions sur le syndrome : 
+      Le syndrome de l'imposteur est un phénomène courant dans lequel une personne doute de ses propres compétences et
+      réussites, et a l'impression de ne pas mériter son succès. Il peut être difficile à gérer et peut avoir un impact
+      négatif sur la confiance en soi et la réalisation de ses objectifs. Heureusement, il existe des solutions pour aider
+      à surmonter le syndrome de l'imposteur.
+      Voici quelques conseils qui peuvent être utiles :
+    </p>
+    <ul>
+      <li>
+        Acknowledge your feelings: il est important de reconnaître que vous êtes victime du syndrome de l'imposteur et
+        d'accepter que vous avez des doutes et des craintes. Cela peut être difficile, mais c'est une étape cruciale pour
+        avancer.
+      </li>
+      <li>
+        Seek support: parler de vos sentiments avec des amis, des collègues ou un professionnel de la santé mentale peut
+        être très bénéfique. Ils peuvent vous aider à mettre vos craintes en perspective et à trouver des moyens de les
+        surmonter.
+      </li>
+      <li>
+        Set achievable goals: fixez-vous des objectifs réalisables et célébrez vos réussites, même les plus petites. Cela
+        vous aidera à vous sentir plus confiant et capable.
+      </li>
+      <li>
+        Practice self-care: prenez soin de vous-même en faisant des activités qui vous aident à vous détendre et à vous
+        sentir bien dans votre peau. Cela peut inclure des choses comme faire de l'exercice, prendre du temps pour vous et
+        passer du temps en nature.
+      </li>
+      <li>
+        Learn from mistakes: plutôt que de vous mettre en colère ou de vous blâmer pour vos erreurs, voyez-les comme des
+        opportunités d'apprentissage et de croissance. Cela vous aidera à être plus confiant et à vous sentir mieux à même
+        de relever les défis.
+      </li>
+    </ul>
+  </div>
+  <button class="button" (click)="reset()">Recommencer</button>
+</div>
+
+<div *ngIf="step > 0 && step < questions.length+1" class="progress-bar" [style.width]="((step - 1) * 100) / questions.length + '%'"></div>

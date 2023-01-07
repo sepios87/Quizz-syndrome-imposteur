@@ -1,0 +1,9 @@
+<div class="question">
+    <h2>{{question}}</h2>
+    <div class="responses">
+        <button [class.button--active]="value === 0" class="button" (click)="onClick(0)">Pas du tout d'accord</button>
+        <button [class.button--active]="value === 1" class="button" (click)="onClick(1)">Plutôt pas d'accord</button>
+        <button [class.button--active]="value === 2" class="button" (click)="onClick(2)">Plutôt d'accord</button>
+        <button [class.button--active]="value === 3" class="button" (click)="onClick(3)">Tout à fait d'accord</button>
+    </div>
+</div>

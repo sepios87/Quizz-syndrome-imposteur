@@ -1,0 +1,34 @@
+.responses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 26px;
+    animation: fadeIn 1s;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30vh auto 0;
+    padding: 0 8%;
+    text-align: center;
+    row-gap: 42px;
+}
+
+// top animation
+@keyframes fadeIn {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

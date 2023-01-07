@@ -1,0 +1,79 @@
+.logo {
+    width: 150px;
+    position: absolute;
+    right: 26px;
+    top: 26px;
+}
+
+.step-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30vh auto 0;
+    text-align: center;
+    row-gap: 32px;
+    padding: 0 6%;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+}
+
+.step-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh auto 2vh;
+    text-align: center;
+    row-gap: 32px;
+    padding: 0 6%;
+
+    &__result {
+        font-weight: bold;
+    }
+
+    &__explain {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+
+.button--back {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    animation: fadeIn 1s;
+    padding: 6px 12px;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    background-color: #956fd6;
+    transition: .3s;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
