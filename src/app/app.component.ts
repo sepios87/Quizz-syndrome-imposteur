@@ -61,7 +61,6 @@ export class AppComponent {
   }
 
   onClick(points: number): void {
-    console.log(this.step - 1);
     this.points[this.step - 1] = points;
     this.nextStep();
   }
